@@ -1,0 +1,53 @@
+# Node.js 관련
+node_modules/
+.next/
+*.log
+
+# Python 관련
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+*.sqlite3
+
+# MySQL 관련 (특정 환경)
+*.db
+*.sql
+*.sqlite
+
+# 환경 변수
+.env
+.env.local
+.env.production
+.env.development
+
+# 빌드 아티팩트
+dist/
+build/
+coverage/
+
+# 운영 체제
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace
+
+# 테스트/디버깅
+test-results/
+debug.log
+
+# Git 관련
+*.orig
+
+# Next.js 빌드 및 설정 파일
+.next/
+out/
+
+# Python 가상 환경
+.venv/
+pip-log.txt
