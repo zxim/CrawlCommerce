@@ -1,3 +1,6 @@
+# 한동안 보류, 나중에 다시 만들 예정
+
+
 frontend/ <br>
 ├── public/             # 정적 파일 (이미지, 폰트 등)<br>
 │   └── logo.png<br>
