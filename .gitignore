@@ -1,56 +1,26 @@
-# 구상.txt
-
-# Node.js 관련
+# dependencies
 node_modules/
-.next/
-*.log
 
-# Python 관련
-__pycache__/
-*.pyc
-*.pyo
-.env
-.venv/
-*.sqlite3
-venv/
-
-# MySQL 관련 (특정 환경)
-*.db
-*.sql
-*.sqlite
-
-# 환경 변수
-.env
-.env.local
-.env.production
-.env.development
-
-# 빌드 아티팩트
-dist/
-build/
-coverage/
-
-# 운영 체제
-.DS_Store
-Thumbs.db
-
-# IDE/Editor
-.vscode/
-.idea/
-*.swp
-*.sublime-workspace
-
-# 테스트/디버깅
-test-results/
-debug.log
-
-# Git 관련
-*.orig
-
-# Next.js 빌드 및 설정 파일
+# build artifacts
 .next/
 out/
+build/
 
-# Python 가상 환경
-.venv/
-pip-log.txt
+# production
+dist/
+
+# env files (무조건 필요한 경우가 아니면 포함하지 않음)
+.env
+.env.*
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE/Editor 설정 파일
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.sublime-workspace
