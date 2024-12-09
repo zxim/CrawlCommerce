@@ -39,6 +39,19 @@ jobs:
   backend:
     name: Backend Build and Test
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: testdb
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
 
     steps:
       - name: Checkout code
@@ -65,4 +78,6 @@ jobs:
           source venv/bin/activate
           pytest -v --tb=short tests/
         working-directory: ./backend
+        env:
+          DATABASE_URL: mysql+pymysql://root:password@localhost:3306/testdb
         shell: bash
