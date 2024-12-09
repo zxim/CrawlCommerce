@@ -1,4 +1,4 @@
-구상.txt
+# 구상.txt
 
 # Node.js 관련
 node_modules/
@@ -12,6 +12,7 @@ __pycache__/
 .env
 .venv/
 *.sqlite3
+venv/
 
 # MySQL 관련 (특정 환경)
 *.db
