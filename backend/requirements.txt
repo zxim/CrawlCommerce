@@ -1,0 +1,20 @@
+# FastAPI와 서버 관련 패키지
+fastapi==0.100.0
+uvicorn==0.22.0
+pydantic==1.10.7
+
+# MySQL 관련 패키지
+sqlalchemy==2.0.20
+aiomysql==0.2.4
+databases==0.6.3
+
+# 테스트 관련 패키지
+pytest==7.4.2
+pytest-asyncio==0.20.3
+httpx==0.24.1
+
+# 개발 및 디버깅
+python-dotenv==1.0.0
+loguru==0.7.0
+black==23.7.0
+isort==5.12.0

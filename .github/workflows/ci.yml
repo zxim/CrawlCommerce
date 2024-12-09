@@ -22,7 +22,7 @@ jobs:
           node-version: '16' # Node.js 16으로 설정
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
         working-directory: ./frontend
 
       - name: Lint and Test
@@ -55,6 +55,7 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
+          pip install --upgrade pip
           pip install -r requirements.txt
         working-directory: ./backend
 
@@ -63,3 +64,4 @@ jobs:
           source venv/bin/activate
           pytest
         working-directory: ./backend
+        shell: bash
