@@ -1,0 +1,60 @@
+name: Build and Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  frontend:
+    name: Frontend Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./frontend
+
+      - name: Lint and Test
+        run: |
+          npm run lint
+          npm run test
+        working-directory: ./frontend
+
+      - name: Build project
+        run: npm run build
+        working-directory: ./frontend
+
+  backend:
+    name: Backend Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+        working-directory: ./backend
+
+      - name: Run tests
+        run: |
+          source venv/bin/activate
+          pytest
+        working-directory: ./backend
