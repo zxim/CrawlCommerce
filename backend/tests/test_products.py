@@ -2,6 +2,8 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.config.db import Base, get_db
+from app.models.product import Product, ProductCategory
+
 
 TEST_DATABASE_URL = "mysql+pymysql://root:password@localhost:3306/testdb"
 
