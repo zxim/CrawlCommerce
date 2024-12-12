@@ -75,7 +75,7 @@ jobs:
       - name: Run tests
         run: |
           source venv/bin/activate
-          pytest -v --tb=short tests/
+          pytest -v --tb=short app/tests/
         working-directory: ./backend
         env:
           DATABASE_URL: mysql+pymysql://root:password@localhost:3306/testdb
