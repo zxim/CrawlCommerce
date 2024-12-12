@@ -24,3 +24,5 @@ yarn-error.log*
 .vscode/
 *.swp
 *.sublime-workspace
+
+venv/
