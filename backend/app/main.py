@@ -2,11 +2,6 @@ from fastapi import FastAPI
 from app.routes import products
 from app.config.db import engine, SessionLocal, Base
 from app.services.crawler import crawl_and_save_products
-from dotenv import load_dotenv
-import os
-
-# 환경 변수 로드
-load_dotenv()  # .env 파일 로드
 
 app = FastAPI()
 

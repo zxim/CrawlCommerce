@@ -13,3 +13,4 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # 기본 모델 클래스 생성
 Base = declarative_base()
+

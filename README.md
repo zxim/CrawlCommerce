@@ -1,3 +1,10 @@
+**백엔드 가상환경 실행**
+.\venv\Scripts\activate
+
+**백엔드 서버 시작 명령어**
+uvicorn app.main:app --reload
+
+
 frontend/ <br>
 ├── public/             # 정적 파일 (이미지, 폰트 등)<br>
 │   └── logo.png<br>
