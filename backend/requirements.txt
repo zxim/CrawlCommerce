@@ -20,3 +20,4 @@ black==23.7.0
 isort==5.12.0
 
 python-dotenv
+requests>=2.26.0
